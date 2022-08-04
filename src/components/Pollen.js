@@ -11,7 +11,7 @@ class Pollen extends Component {
   }
 
   callSERVER() {
-    fetch("/data.json")
+    fetch("http://localhost:3000/pollen")
       .then(res => res.json())
       .then(
         (result) => {
