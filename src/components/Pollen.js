@@ -7,8 +7,15 @@ class Pollen extends Component {
   }
 
   callSERVER() {
-    fetch("http://localhost:3000/pollen")
-      .then(res => res.text())
+    fetch("/data.json"
+    ,{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }
+    )
+      .then(res => res.json())
       .then(res => this.setState({ pollenResponse: res}))
       .catch(err => err);
   }
