@@ -2,11 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import Pollen from './components/Pollen';
+import User from "./components/User";
 
 function App() {
   return (
     <div className="App">
       <Pollen />
+      <User />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -24,5 +26,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
