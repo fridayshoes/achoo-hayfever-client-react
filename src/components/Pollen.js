@@ -11,7 +11,7 @@ class Pollen extends Component {
   }
 
   callSERVER() {
-    fetch("http://localhost:3000/pollen")
+    fetch("data.json")
       .then(res => res.json())
       .then(
         (result) => {
@@ -56,11 +56,11 @@ class Pollen extends Component {
           <h1>Pollen Count from React</h1>
           {console.log(pollenResponse)}
           {pollenResponse.map(pollen => 
-          <div>Grass Pollen {pollen.Count.grass_pollen}</div>)}
+          <div>Grass Pollen key={pollen.Count.grass_pollen}</div>)}
           {pollenResponse.map(pollen => 
-          <div>Tree Pollen {pollen.Count.tree_pollen}</div>)}
+          <div>Tree Pollen key={pollen.Count.tree_pollen}</div>)}
           {pollenResponse.map(pollen => 
-          <div>Weed Pollen {pollen.Count.weed_pollen}</div>)}
+          <div>Weed Pollen key={pollen.Count.weed_pollen}</div>)}
         </div>
       );
     }  
