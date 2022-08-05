@@ -55,12 +55,18 @@ class Pollen extends Component {
         <div>
           <h1>Pollen Count from React</h1>
           {console.log(pollenResponse)}
-          {pollenResponse.map(pollen => 
-          <div>Grass Pollen key={pollen.Count.grass_pollen}</div>)}
-          {pollenResponse.map(pollen => 
-          <div>Tree Pollen key={pollen.Count.tree_pollen}</div>)}
-          {pollenResponse.map(pollen => 
-          <div>Weed Pollen key={pollen.Count.weed_pollen}</div>)}
+          {pollenResponse.map((pollen, index) => 
+          <div key={index}>
+            Grass Pollen: 
+            {pollen.Count.grass_pollen},
+            {pollen.Risk.grass_pollen}<br></br>
+            Tree Pollen:
+            {pollen.Count.tree_pollen},
+            {pollen.Risk.tree_pollen}<br></br>
+            Weed Pollen:
+            {pollen.Count.weed_pollen},
+            {pollen.Risk.weed_pollen}<br></br>
+          </div>)}
         </div>
       );
     }  
