@@ -53,7 +53,7 @@ class Pollen extends Component {
     } else {
       return (
         <div>
-          <h1>Pollen Count from React</h1>
+          <h1>Achoo! Your pollen monitor</h1>
           {console.log(pollenResponse)}
           {pollenResponse.map((pollen, index) => 
           <div key={index}>
