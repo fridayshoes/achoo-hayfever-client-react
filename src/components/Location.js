@@ -16,6 +16,18 @@ class Location extends Component {
   handleSubmit(event) {
     alert('The location you entered was:' + this.state.value)
     event.preventDefault();
+
+  fetch('http://localhost:3000/users', {
+  method: "POST",
+  headers: {
+    'Content-type': 'application/json'
+  },
+  body: JSON.stringify(this.state)
+})
+.then((response) => response.json())
+.then((result) => {
+  console.log(result)
+})
   }
 
   render(){
