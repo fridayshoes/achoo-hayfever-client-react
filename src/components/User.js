@@ -22,9 +22,12 @@ class User extends Component {
 		console.log("form submit")
 		console.log(event)
 		alert('A form was submitted: ' + this.state.value);
-
+		event.preventDefault();
 		fetch('http://localhost:3000/users', {
 			method: 'POST',
+			headers: {
+				'Content-type': 'application/json'
+			},
 			// We convert the React state to JSON and send it as the POST body
 			body: JSON.stringify(this.state)
 		}).then(function(response) {
@@ -33,7 +36,7 @@ class User extends Component {
 			return response.json();
 		});
 
-		event.preventDefault();
+		
 	}
 
 	render() {
