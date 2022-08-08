@@ -11,7 +11,13 @@ class Pollen extends Component {
   }
 
   callSERVER() {
-    fetch("data.json")
+    fetch("http://localhost:3000/pollen", {
+      method: "POST",
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({ location: "London"})
+    })
       .then(res => res.json())
       .then(
         (result) => {

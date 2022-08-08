@@ -17,7 +17,7 @@ class Location extends Component {
     alert('The location you entered was:' + this.state.value)
     event.preventDefault();
 
-  fetch('http://localhost:3000/users', {
+  fetch('http://localhost:3000/pollen', {
   method: "POST",
   headers: {
     'Content-type': 'application/json'
@@ -26,6 +26,7 @@ class Location extends Component {
 })
 .then((response) => response.json())
 .then((result) => {
+  console.log("location result")
   console.log(result)
 })
   }
