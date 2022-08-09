@@ -17,7 +17,7 @@ class Pollen extends Component {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(this.location),
+      body: JSON.stringify({value: this.props.location}),
     })
       .then((res) => res.json())
       .then(
@@ -37,14 +37,20 @@ class Pollen extends Component {
       );
   }
 
-  componentDidMount() {
-    this.callSERVER();
+  // componentDidMount() {
+  //   this.callSERVER();
+  // }
+
+  componentDidUpdate(prevProps) {
+    console.log(this.props.location)
+    if (prevProps.location !== this.props.location) {
+      this.callSERVER();
+    }
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   this.callSERVER();
-  //   if (prevState.location !== this.state.location) {
-  //     this.callSERVER();
+  // componentDidUpdate(prevProps) {
+  //   if (this.props.channel !== prevProps.channel) {
+  //     // do stuff
   //   }
   // }
 

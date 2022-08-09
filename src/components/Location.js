@@ -5,7 +5,6 @@ class Location extends Component {
     super(props);
     this.state = {
       value: "",
-      pollenResponse: [],
       error: null,
       isLoaded: false,
     };
@@ -18,7 +17,6 @@ class Location extends Component {
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
-
 
   handleSubmit(event) {
     alert("The location you entered was:" + this.state.value);
