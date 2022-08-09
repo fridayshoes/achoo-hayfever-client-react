@@ -1,13 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import Pollen from './components/Pollen';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
+import Pollen from "./components/Pollen";
 import User from "./components/User";
+import Location from "./components/Location";
 
 function App() {
+  const [location, setLocation] = useState("");
+  console.log(location);
   return (
     <div className="App">
-      <Pollen />
+      <Pollen location={location}/>
+      <br></br>
+      <Location setLocation={setLocation} />
       <User />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
