@@ -37,22 +37,12 @@ class Pollen extends Component {
       );
   }
 
-  // componentDidMount() {
-  //   this.callSERVER();
-  // }
-
   componentDidUpdate(prevProps) {
     console.log(this.props.location)
     if (prevProps.location !== this.props.location) {
       this.callSERVER();
     }
   }
-
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.channel !== prevProps.channel) {
-  //     // do stuff
-  //   }
-  // }
 
   render() {
     const { error, isLoaded, pollenResponse } = this.state;

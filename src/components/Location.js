@@ -25,10 +25,8 @@ class Location extends Component {
   }
 
   render() {
-    // const { error, isLoaded, pollenResponse } = this.state;
     return (
       <div>
-        {/* {pollenResponse.updatedAt} */}
         <form onSubmit={this.handleSubmit}>
           <label>
             Enter your location:
