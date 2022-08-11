@@ -59,7 +59,7 @@ class User extends Component {
 
 	render() {
 		return (
-			<div><h2 className="title">Sign up</h2>
+			<div><h1 className="title">Sign up</h1>
 			<form onSubmit={this.handleSubmit}>
 				<label for="email">Email: 
 				<input type="text" id="email" value={this.state.email} onChange={(event)=>this.handleChange(event, "email")} />
@@ -70,7 +70,7 @@ class User extends Component {
 				<label for="location">Location: 
 				<input type="text" id="location" value={this.state.location} onChange={(event)=>this.handleChange(event, "location")} />
 				</label>
-				<label for="Pollen">Pollen:
+				<label for="Pollen">Pollen Type:
           <select value={this.state.pollen} onChange={(event)=>this.handleChange(event, "pollen")}>
 						<option value=""></option>
 						<option value="grass">Grass</option>
@@ -78,7 +78,7 @@ class User extends Component {
             <option value="weed">Weed</option>
           </select>
         </label>
-				<input type="submit" value="Submit" />
+				<input className="input-submit" type="submit" value="Submit" />
 			</form> 
 			</div>
 		);

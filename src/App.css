@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.parentContainer {
+  display: flex;
+}
+  
+.childContainer { 
+  flex: 1; /*grow*/; 
+}
+

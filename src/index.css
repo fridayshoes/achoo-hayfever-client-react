@@ -16,9 +16,11 @@ form {
   width: 100%;
   margin-bottom: 20px;
   display: flex;
+  background-color: #eca72c ;
   border-radius: calc(0.5 * 100px);
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.38);
   justify-content: space-evenly;
+  padding: 30px;
 }
 
 input {
@@ -28,13 +30,4 @@ input {
   padding-right: 5px;
   padding-left: 10px;
   border-radius: calc(0.5 * 100px);
-}
-
-input submit {
-  background: transparent;
-  color: #5b5b5b;
-  text-transform: capitalize;
-  cursor: pointer;
-  font-weight: 600;
-  margin-right: 10px;
 }
