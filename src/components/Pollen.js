@@ -50,23 +50,27 @@ class Pollen extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div>Where will you be sneezing from?</div>;
     } else {
       return (
         <div>
-          <h1>Achoo! Your pollen monitor</h1>
+          <h1>Achoo!</h1>
+          <h2>Here's your sneeze stats for {this.props.location}</h2>
           {console.log(pollenResponse)}
           {pollenResponse.map((pollen, index) => (
             <div key={index}>
-              Grass Pollen:
-              {pollen.Count.grass_pollen},{pollen.Risk.grass_pollen}
+              <div>Grass Pollen:
               <br></br>
+              <h1>{pollen.Count.grass_pollen}</h1>{pollen.Risk.grass_pollen}
+              </div>
+              <div>
               Tree Pollen:
-              {pollen.Count.tree_pollen},{pollen.Risk.tree_pollen}
-              <br></br>
+              <h1>{pollen.Count.tree_pollen}</h1>{pollen.Risk.tree_pollen}
+              </div>
+              <div>
               Weed Pollen:
-              {pollen.Count.weed_pollen},{pollen.Risk.weed_pollen}
-              <br></br>
+              <h1>{pollen.Count.weed_pollen}</h1>{pollen.Risk.weed_pollen}
+              </div>
             </div>
           ))}
         </div>
