@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# ACHOO!-hayfever-app (REACT-FRONT-END)
+
+A location based app that notifies you with an SMS when pollen count levels reach dangerously sneezey levels in your area.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# TECHNOLOGIES used
+
+- [Express](https://expressjs.com/) web framework for Node.js.
+- [React] (https://reactjs.org/) - for frontend
+- [MongoDB] fot local database testing
+- [MongoDB Atlas](https://www.mongodb.com/atlas/database) for AWS cloud database
+- [Mongoose](https://mongoosejs.com) to model objects in MongoDB.
+- [Nodemon](https://nodemon.io/) to reload the server automatically.
+- [ESLint](https://eslint.org) for linting.
+- [Jest](https://jestjs.io/) for testing.
+- [Cypress](https://www.cypress.io/) for end-to-end testing.
+- [Axios](https://github.com/axios/axios) for pollen api parsing
+- [Ambee](https://www.getambee.com/) pollen and climate API data.
+- [Twilio](https://www.twilio.com/) for SMS notifications.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+# Cypress for integration testing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- To install cypress for testing: https://docs.cypress.io/guides/getting-started/opening-the-app#Adding-npm-Scripts
+- To run from CLI: Add this as a script in package.json file // "cypress:open": "cypress open" //
+- To run from command line use : // npm run cypress:open //
+- To test from the command line use: // npm run test:integration //
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Jest for unit testing
 
-### `npm test`
+- To test from the command line use: // npm run test:unit //
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Unit and Integration testing together
 
-### `npm run build`
+- To test from the command line use: // npm run test:all //
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Nodemon for automatic reloading of the host server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- To add nodemon to package.json file as dependencies: // npm install --save-dev nodemon //
+- Add to scripts in package.json file: // "start": "nodemon ./bin/www", //
+- To run nodemon: // npm start //
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+The application uses the ambee API (https://www.getambee.com/api-documentation). The API key has a 30-day expiry (last activated on 02/08/2022). API key may need to be updated if outside the 30 day limit from the date shown in this README.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application has been built on Express.js. To install clone the repo and then run the command below:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Running the program using Atlas Cloud MongoDB Database with Twillio SMS functionality
 
-## Learn More
+- Run Express Server using:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run React Client using:
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Running the program using Local MongoDB Database
 
-### Analyzing the Bundle Size
+- First change DB config to local config in bin/www
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- On WSL2, start database using:
 
-### Making a Progressive Web App
+```
+sudo service mongodb start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+or
 
-### Advanced Configuration
+```
+sudo mongod --dbpath ~/data/db
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Run React Client using:
 
-### Deployment
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Run Express Server using:
 
-### `npm run build` fails to minify
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Run React Client using:
+
+```
+npm start
+```
+
+### SCREENNSHOTS & DIAGRAMS
+
+In 'Diagrams' folder.
+
+### COLLABORATORS
+
+JENNIE - https://github.com/Jenniered
+DAVID - https://github.com/fridayshoes
+EPHRON - https://github.com/Ephfullstack
+DANIEL - https://github.com/danielotf
+
+# LINK TO BACK-END REPO :
+
+https://github.com/fridayshoes/achoo-hayfever-server-express
