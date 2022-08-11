@@ -9,12 +9,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
 .App-header {
-  background-color: #44355B;
+  /* background-color: #44355B; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background:
+    radial-gradient(circle, transparent 20%, #44355B 20%, #44355B 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, #44355B 20%, #44355B 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#31263e 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #31263e 8px, transparent 8px) -4px 0;
+    background-color: #44355B;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 
 .App-link {
@@ -36,15 +43,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* .input-submit {
-  background: transparent;
-  color: #5b5b5b;
-  text-transform: capitalize;
-  cursor: pointer;
-  font-weight: 600;
-  margin-right: 10px;
-} */
 
 .parentContainer {
   display: flex;
