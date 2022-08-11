@@ -8,7 +8,7 @@ class User extends Component {
 			email: "",
 			mobile: "",
 			location: "",
-			pollen: "",
+			pollen: null,
 		};
 		
 		this.handleChange = this.handleChange.bind(this);
@@ -38,13 +38,23 @@ class User extends Component {
 			},
 			// We convert the React state to JSON and send it as the POST body
 			body: JSON.stringify(this.state)
-		}).then(function(response) {
-			console.log("fetch response")
-			console.log(response)
-			return response.json();
-		});
-
-		
+		})
+			.then(response => {
+				console.log(response)
+				if (!response.ok) {
+					return "not ok"
+					// throw new Error(response.statusText)
+				}
+				console.log(response)
+				return response.json()
+			}).catch(err=>{
+				window.alert('Registration failed');
+				console.log(err)
+		})
+		// 	console.log("fetch response")
+		// 	console.log(response)
+		// 	return response.json();
+		// });
 	}
 
 	render() {
@@ -60,22 +70,14 @@ class User extends Component {
 				<label for="location">Location: 
 				<input type="text" id="location" value={this.state.location} onChange={(event)=>this.handleChange(event, "location")} />
 				</label>
-				{/* <label for="pollen">Pollen: 
-				<input type="text" id="pollen" value={this.state.pollen} onChange={(event)=>this.handleChange(event, "pollen")} />
-				</label> */}
 				<label for="Pollen">Pollen:
           <select value={this.state.pollen} onChange={(event)=>this.handleChange(event, "pollen")}>
-            <option value="grass">Grass</option>
+						<option value=""></option>
+						<option value="grass">Grass</option>
             <option value="tree">Tree</option>
             <option value="weed">Weed</option>
           </select>
         </label>
-				
-				
-				
-				
-				
-				
 				<input type="submit" value="Submit" />
 			</form> 
 			</div>
