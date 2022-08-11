@@ -16,15 +16,7 @@ function App() {
         <br></br>
         <Location setLocation={setLocation} />
         <User />
-        <p>Powered by Mbata, Agyeman, Evans & Johnson</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Powered by Mbata, Agyeman, Evans & Johnson</p>      
       </header>
     </div>
   );

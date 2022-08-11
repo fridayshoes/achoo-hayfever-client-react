@@ -37,14 +37,14 @@
   }
 }
 
-.input-submit {
+/* .input-submit {
   background: transparent;
   color: #5b5b5b;
   text-transform: capitalize;
   cursor: pointer;
   font-weight: 600;
   margin-right: 10px;
-}
+} */
 
 .parentContainer {
   display: flex;
@@ -54,3 +54,21 @@
   flex: 1; /*grow*/; 
 }
 
+
+.buttonUser {
+  /*Change the width as much as you like, but make sure 
+  margin-left and margin-right + width = 100%*/
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+.selectorBox {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-radius: calc(0.5 * 100px);
+  text-align: center;
+}

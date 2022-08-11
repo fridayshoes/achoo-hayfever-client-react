@@ -59,26 +59,46 @@ class User extends Component {
 
 	render() {
 		return (
-			<div><h1 className="title">Sign up</h1>
+			<div>
+			<h2 className="title">Sign up</h2>
+			<h5>Get SMS pollen alerts and allergy advice direct to your phone</h5>
 			<form onSubmit={this.handleSubmit}>
+			<div class="parentContainer">
+			<div class="childContainer">
 				<label for="email">Email: 
 				<input type="text" id="email" value={this.state.email} onChange={(event)=>this.handleChange(event, "email")} />
 				</label>
+			</div>
+			<div class="childContainer">	
 				<label for="mobile">Mobile: 
 				<input type="text" id="mobile" value={this.state.mobile} onChange={(event)=>this.handleChange(event, "mobile")} />
 				</label>
+			</div>	
+			</div>
+			<div class="parentContainer">
+			<div class="childContainer">	
 				<label for="location">Location: 
 				<input type="text" id="location" value={this.state.location} onChange={(event)=>this.handleChange(event, "location")} />
 				</label>
-				<label for="Pollen">Pollen Type:
-          <select value={this.state.pollen} onChange={(event)=>this.handleChange(event, "pollen")}>
+			</div>
+			<div class="childContainer">
+				<label for="Pollen">Pollen Type:<br></br>
+          <select class="selectorBox" value={this.state.pollen} onChange={(event)=>this.handleChange(event, "pollen")}>
 						<option value=""></option>
 						<option value="grass">Grass</option>
             <option value="tree">Tree</option>
             <option value="weed">Weed</option>
           </select>
         </label>
-				<input className="input-submit" type="submit" value="Submit" />
+			</div>
+			</div>
+				{/* <div class="parentContainer">
+				<div class="childContainer"></div>
+				<div class="childContainer"> */}
+				<input class="buttonUser" type="submit" value="Submit" />
+				{/* </div>
+				<div class="childContainer"></div>
+				</div> */}
 			</form> 
 			</div>
 		);
