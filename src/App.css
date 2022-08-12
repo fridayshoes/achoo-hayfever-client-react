@@ -70,3 +70,8 @@
   border-radius: calc(0.5 * 100px);
   text-align: center;
 }
+
+.pollen_icons {
+  height: 33px;
+  padding-right: 10px;
+}

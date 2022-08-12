@@ -1,3 +1,6 @@
+import m_grass_icon from "../m_grass_icon.svg";
+import m_tree_icon from "../m_tree_icon.svg";
+import m_weeds_icon from "../m_weeds_icon.svg";
 import React, { Component } from "react";
 
 class Pollen extends Component {
@@ -61,15 +64,15 @@ class Pollen extends Component {
             <div class="parentContainer" key={index}>
               <div class="childContainer">Grass Pollen<br></br>Count:
               <br></br>
-              <h1>{pollen.Count.grass_pollen}</h1>
+              <h1><img src={m_grass_icon} class="pollen_icons"/>{pollen.Count.grass_pollen}</h1>
               Risk: {pollen.Risk.grass_pollen}
               </div>
               <div class="childContainer">Tree Pollen<br></br>Count:
-              <h1>{pollen.Count.tree_pollen}</h1>
+              <h1><img src={m_tree_icon} class="pollen_icons"/>{pollen.Count.tree_pollen}</h1>
               Risk: {pollen.Risk.tree_pollen}
               </div>
               <div class="childContainer">Weed Pollen<br></br>Count:
-              <h1>{pollen.Count.weed_pollen}</h1>
+              <h1><img src={m_weeds_icon} class="pollen_icons"/>{pollen.Count.weed_pollen}</h1>
               Risk: {pollen.Risk.weed_pollen}
               </div>
             </div>
