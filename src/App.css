@@ -9,12 +9,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #44355B; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background:
+    radial-gradient(circle, transparent 20%, #44355B 20%, #44355B 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, #44355B 20%, #44355B 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#31263e 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #31263e 8px, transparent 8px) -4px 0;
+    background-color: #44355B;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 
 .App-link {
@@ -35,4 +42,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.parentContainer {
+  display: flex;
+}
+  
+.childContainer { 
+  flex: 1; /*grow*/; 
+}
+
+
+.buttonUser {
+  /*Change the width as much as you like, but make sure 
+  margin-left and margin-right + width = 100%*/
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+}
+
+.selectorBox {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-radius: calc(0.5 * 100px);
+  text-align: center;
+}
+
+.pollen_icons {
+  height: 33px;
+  padding-right: 10px;
 }
