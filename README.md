@@ -1,8 +1,14 @@
 # ACHOO!-hayfever-app (REACT-FRONT-END)
 
+Welcome Achoo!! - It's the bees sneeze!
+
 A location based app that notifies you with an SMS when pollen count levels reach dangerously sneezey levels in your area.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots
+
+![](screenshots/Achoo01.jpg)
+![](screenshots/Achoo02.jpg)
+![](screenshots/Achoo03.jpg)
 
 # TECHNOLOGIES used
 
