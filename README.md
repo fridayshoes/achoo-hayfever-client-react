@@ -1,6 +1,6 @@
 # ACHOO!-hayfever-app (REACT-FRONT-END)
 
-Welcome Achoo!! - It's the bees sneeze!
+Welcome to Achoo!! - It's the bees sneeze!
 
 A location based app that notifies you with an SMS when pollen count levels reach dangerously sneezey levels in your area.
 
