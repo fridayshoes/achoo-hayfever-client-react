@@ -110,16 +110,20 @@ npm start
 npm start
 ```
 
-### SCREENNSHOTS & DIAGRAMS
+### PLANNING & DIAGRAMS
 
-In 'Diagrams' folder.
+![](diagrams/app-overview.png)
+![](diagrams/pollen-api-data-flow.png)
+![](diagrams/trello-wall.png)
+![](diagrams/twilio-diagram.png)
+![](diagrams/user-details-data-flow.png)
 
 ### COLLABORATORS
 
-JENNIE - https://github.com/Jenniered
-DAVID - https://github.com/fridayshoes
-EPHRON - https://github.com/Ephfullstack
-DANIEL - https://github.com/danielotf
+- JENNIE - https://github.com/Jenniered
+- DAVID - https://github.com/fridayshoes
+- EPHRON - https://github.com/Ephfullstack
+- DANIEL - https://github.com/danielotf
 
 # LINK TO BACK-END REPO :
 
